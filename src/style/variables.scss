@@ -1,0 +1,12 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+
+$primary-button: #907644;
+$secondary-button: #e3c18c;
+
+// $background-color: linear-gradient(93.5deg, #0232ff 0.59%, #010056 94.82%);
+
+$background-button: radial-gradient(circle at 100%, $primary-button, #9E7539),url('../assets/img/texture-bg.png'),linear-gradient(to top, $primary-button, $secondary-button 20px);
+
+$background-two: linear-gradient(200deg, #314567, #0e141e 500px), url('../assets/img/texture-bg.png'), linear-gradient(270deg, #2b4873 100px, #212B3B 1000px);
+$font-family: 'GeneralSans', 'Corbel', sans-serif;

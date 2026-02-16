@@ -1,12 +1,10 @@
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
+$primary-color: #e63946;        // Rouge principal (titres, éléments forts)
+$secondary-color: #f8b4b4;      // Rose doux (accents, fonds légers)
 
-$primary-button: #907644;
-$secondary-button: #e3c18c;
+$primary-button: #e63946;       // Bouton principal rouge
+$secondary-button: #ffffff;     // Bouton secondaire blanc
 
-// $background-color: linear-gradient(93.5deg, #0232ff 0.59%, #010056 94.82%);
+$background-color: #fff5f5;  // (optionnel si tu veux un fond global)
 
-$background-button: radial-gradient(circle at 100%, $primary-button, #9E7539),url('../assets/img/texture-bg.png'),linear-gradient(to top, $primary-button, $secondary-button 20px);
-
-$background-two: linear-gradient(200deg, #314567, #0e141e 500px), url('../assets/img/texture-bg.png'), linear-gradient(270deg, #2b4873 100px, #212B3B 1000px);
-$font-family: 'GeneralSans', 'Corbel', sans-serif;
+$background-two: #fde2e2;       // Fond rose très clair (sections)
+$font-family: 'Playfair Display', serif;

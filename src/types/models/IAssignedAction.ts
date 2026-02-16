@@ -3,9 +3,9 @@ import type { IUser } from './IUser.js';
 import type { stateAction } from '../enum/enumStateAction.js';
 
 export interface IAssignedAction {
-	action : string | IAction;
-	angel : string | IUser;
-	target : string | IUser;
+	action : IAction;
+	angel : IUser;
+	target : IUser;
 	status : stateAction;
 	isUnmasked : boolean;
 }

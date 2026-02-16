@@ -1,0 +1,96 @@
+@import "../variables"; // si tu as un fichier global
+
+.auth-container {
+  min-height: 100vh;
+  background: $background-two;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family;
+}
+
+.auth-card {
+  background: white;
+  width: 100%;
+  max-width: 380px;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group {
+    text-align: left;
+    margin-bottom: 1.2rem;
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+      color: #555;
+    }
+
+    input {
+      width: 90%;
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 0.95rem;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  .message {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+
+    &.error {
+      color: #d62828;
+    }
+
+    &.success {
+      color: #2a9d8f;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: none;
+    background: $primary-button;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .switch {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: #555;
+
+    span {
+      color: $primary-color;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

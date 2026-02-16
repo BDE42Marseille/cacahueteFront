@@ -1,0 +1,66 @@
+@import "../variables";
+
+.dashboard-page {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+
+  /* Grid pour PC */
+  grid-template-areas: 
+    "item1 item3"
+    "item5 item4";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+
+  .grid-item {
+    background-color: $background-two;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background-color: $primary-button;
+      color: $secondary-button;
+      border: none;
+      padding: 8px 16px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .btn-secondary {
+      background-color: $secondary-button;
+      color: $primary-button;
+      border: 1px solid $primary-button;
+      padding: 6px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .item1 { grid-area: item1; }
+  .item3 { grid-area: item3; }
+  .item4 { grid-area: item4; }
+  .item5 { grid-area: item5; }
+
+  /* Responsive Mobile */
+  @media (max-width: 768px) {
+    grid-template-areas: 
+      "item1"
+      "item3"
+      "item4"
+      "item5";
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,11 @@
+@import "./pages/Auth.scss";
+@import "./pages/Loading.scss";
+@import "./pages/Dashboard.scss";
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}

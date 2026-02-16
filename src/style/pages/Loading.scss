@@ -1,0 +1,31 @@
+@import "../variables";
+
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+  font-family: $font-family;
+  color: $primary-color;
+
+  h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid $secondary-color;
+    border-top: 6px solid $primary-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

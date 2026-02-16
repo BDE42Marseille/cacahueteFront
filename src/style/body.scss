@@ -1,6 +1,10 @@
+@import "variables";
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: $font-family;
+    background-color: $background-color;
+    color: $primary-color;
+    height: 100%;
+    min-height: 100dvh;
 }

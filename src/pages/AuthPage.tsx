@@ -70,7 +70,7 @@ export default function Auth({ handleLogin } : { handleLogin: (token: string) =>
           <label>Login 42</label>
           <input
             type="text"
-            placeholder="ex: ananselem"
+            placeholder="ex: ananselm"
             value={login42}
             onChange={(e) => setLogin42(e.target.value)}
             required

@@ -60,16 +60,12 @@ function App() {
     setAuthStatus("authenticated");
   };
 
-  if (authStatus === "loading") {
-    return <LoadingPage />;
-  }
-
   if (authStatus === "unauthenticated") {
     return <Auth handleLogin={handleLogin} />;
   }
 
   if (authStatus === "authenticated" && user) {
-    return <DashboardPage user={user} />;
+    return <DashboardPage user={user} token={Cookies.get("auth_token") || ""} />;
   }
 
   return <LoadingPage />;

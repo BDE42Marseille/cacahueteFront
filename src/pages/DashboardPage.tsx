@@ -143,10 +143,10 @@ export default function DashboardPage({user, token}: {user: IUser, token: string
       });
   };
 
-  const handleDemasque = (actionId: string): void => {
-    setSelectedActionId(actionId);
-    setShowDemasqueForm(true);
-  };
+  // const handleDemasque = (actionId: string): void => {
+  //   setSelectedActionId(actionId);
+  //   setShowDemasqueForm(true);
+  // };
 
   const handleSubmitDemasque = async (): Promise<void> => {
     if (!selectedActionId || !demasqueTarget) {
@@ -184,7 +184,7 @@ export default function DashboardPage({user, token}: {user: IUser, token: string
       if (status === 1)
         return <button onClick={() => handleValidateAction(action._id)}>Valider</button>;
       else
-        return <button onClick={() => handleDemasque(action._id)}>Démasquer</button>;
+        return (<></>);
     }
 
   const messageOrListActionsTarget = (): JSX.Element => {
@@ -195,7 +195,12 @@ export default function DashboardPage({user, token}: {user: IUser, token: string
         <ul>
           {targetActions.map((action) => (
             <li key={action._id}>
-              {action.action.description}
+              <div>
+                <h4>
+                {action.action.description}
+                </h4>
+                <p>Par : {action.angel.login}</p>
+              </div>
               {whichButton(action.status, action)}
             </li>
           ))}
@@ -216,7 +221,7 @@ export default function DashboardPage({user, token}: {user: IUser, token: string
             <h3>Action en cours</h3>
             <h4>{currentAction.action.description}</h4>
             <p>Cible : {currentAction.target.login}</p>
-            <button className="abandon-button" onClick={handleValidateCurrentAction}>Valider</button>
+            <button className="abandon-button" onClick={handleValidateCurrentAction}>Terminer</button>
             <button className="abandon-button" onClick={handleAbandonAction}>Abandonner</button>
           </div>
         ) : (
@@ -236,8 +241,7 @@ export default function DashboardPage({user, token}: {user: IUser, token: string
         <div className="total-score">{scores.total}</div>
         <div className="sub-scores">
           <div>Points d'ange : {scores.good}</div>
-          <div>Démasquages réussis : {scores.reveal}</div>
-          <div>Démasquages subis : {scores.revealed}</div>
+          <div>Point de coopération : {scores.reveal}</div>
         </div>
       </div>
 
